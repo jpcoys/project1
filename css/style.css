@@ -1,0 +1,66 @@
+/* CSS Mad Lib Game */
+
+.word {
+	border-bottom: 1px solid black;
+}
+
+p{
+	margin: 10px 0;
+	padding: 10px;
+}
+
+input {
+	position: absolute;
+	top: 0;
+	left: -100px;
+}
+
+label {
+	margin: 10px 0;
+	padding: 10px;
+	display: block;
+	width: 300px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	background: #113377;
+	border-radius: 10px;
+}
+
+body>div {
+	background: #f2f2f2;
+	border: 5px solid black;
+	border-radius: 10px;
+	width: 1325px;
+	overflow: hidden;
+}
+
+#toggle:checked ~ div p {
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
+#toggle:checked ~ div span {
+	display: block;
+	clear: left;
+	visibility: visible;
+	margin: 0.25em;
+	padding: 0 1em 0 0;
+	font-size: 16px;
+	line-height: 2em;
+	background: #f2f2ff;
+	border: 2px solid #113377;
+	border-radius: 5px;
+}
+#toggle:checked ~ div span::before {
+	content: attr(title);
+	margin: 0 1em 0 0;
+	padding: 0 1em;
+	float: left;
+	min-width: 20%;
+	color: #fff;
+	font-weight: bold;
+	background: #113377;
+}
